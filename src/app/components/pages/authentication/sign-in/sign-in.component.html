@@ -1,0 +1,87 @@
+<header>
+    <img class="logo-icon" src="{{logoIcon}}" alt="logo icon" />
+</header>
+<!-- MAIN WRAPPER -->
+<div class="main-wrapper">
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+        <h2 class="hero-text">
+            We knew you'd be back...
+        </h2>
+        <!-- IMAGE -->
+        <img src="{{heroImage}}" alt="hero image" class="hero-image" />
+    </div>
+    <!-- SIGN UP FORM -->
+    <div class="form-container">
+        <form class="sign-in-form" [formGroup]="SIGN_IN_FORM">
+            <!-- FORM HEADER -->
+            <div class="form-header">
+                <!-- LOGO IMAGE -->
+                <img src="{{logoImage}}" alt="logo image" class="logo-image" />
+                <!-- FORM HEADER TEXT -->
+                <h2 class="header-text">
+                    <span>
+                        Welcome
+                    </span>
+                    Back!
+                </h2>
+            </div>
+            <!-- INPUT WRAPPER -->
+            <div class="user-input-wrapper">
+                <!-- EMAIL INPUT -->
+                <input type="text" class="input-text input" formControlName="email" required />
+                <span class="floating-label">
+                    {{ DEFAULT_FORM_DATA.email }}
+                </span>
+
+                <!-- ERROR MESSAGE -->
+                <div *ngIf="SIGN_IN_FORM.controls['email'].invalid && (SIGN_IN_FORM.controls['email'].dirty || SIGN_IN_FORM.controls['email'].touched)"
+                    class="error-message">
+                    <p>
+                        <fa-icon [icon]="warningIcon"></fa-icon>
+                        A valid email is required
+                    </p>
+                </div>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="user-input-wrapper">
+                <input type="password" class="input-text input" formControlName="password" required />
+                <span class="floating-label">
+                    {{ DEFAULT_FORM_DATA.password }}
+                </span>
+
+                <!-- ERROR MESSAGE -->
+                <div *ngIf="SIGN_IN_FORM.controls['password'].invalid && (SIGN_IN_FORM.controls['password'].dirty || SIGN_IN_FORM.controls['password'].touched)"
+                    class="error-message">
+                    <p>
+                        <fa-icon [icon]="warningIcon"></fa-icon>
+                        A valid password is required
+                    </p>
+                </div>
+            </div>
+            <!-- INPUT END -->
+
+            <!-- CHECKBOX -->
+            <div class="checkbox-wrapper">
+                <input type="checkbox" name="news-letter" class="checkbox" />
+                <label for="news-letter">
+                    Remember me
+                </label>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="button-wrapper">
+                <button class="sign-in-btn btn" [ngClass]="{ 'disabled': SIGN_IN_FORM.invalid }"
+                    (click)="SIGN_IN_USER()">
+                    Sign In
+                </button>
+
+                <button class="reset-btn btn" [routerLink]="['/reset']">
+                    Reset password
+                </button>
+            </div>
+        </form>
+        <!-- FORM END -->
+    </div>
+</div>

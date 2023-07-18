@@ -1,0 +1,69 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* COLOR PALETTE */
+    --white: #fbfbfb;
+    --black: #686868;
+    --gray: #c5c5c5;
+    --lighter-gray: #ebebeb;
+    --light-gray: #e2dfdf;
+    --dark-gray: #9d9d9c;
+    --light-blue: #d4e4f0;
+    --blue: #a1caef;
+    --dark-blue: #6ba9e4;
+    --amber: #f0a167;
+    --warn: tomato;
+
+    /* GLOW */
+    --amber-glow: 0 2rem 2rem rgba(255, 159, 16, 0.2);
+    --blue-glow: 0 2rem 2rem rgba(16, 128, 255, 0.2);
+
+    /* SHADOWS */
+    --shadow-light: 0 1rem 1rem 0 rgba(0, 0, 0, .1);
+    --shadow-dark: 0 2rem 2rem 0 rgba(0, 0, 0, .2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background: var(--white);
+}
+
+/* SCROLLBAR STYLING */
+/* WIDTH */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* TRACK */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* HANDLE */
+::-webkit-scrollbar-thumb {
+    background: var(--amber);
+    -webkit-box-shadow: var(--shadow-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+/* HANDLE ON hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f7b484;
+}

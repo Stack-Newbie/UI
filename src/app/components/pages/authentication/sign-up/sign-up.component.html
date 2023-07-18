@@ -1,0 +1,104 @@
+<header>
+    <img class="logo-icon" src="{{logoIcon}}" alt="logo icon" />
+</header>
+<!-- MAIN WRAPPER -->
+<div class="main-wrapper">
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+        <h2 class="hero-text">
+            Join the Community today...
+        </h2>
+        <!-- LOGO BANNER -->
+        <img src="{{logoBanner}}" alt="logo banner" class="logo-banner" />
+    </div>
+    <!-- SIGN UP FORM -->
+    <div class="form-container">
+        <form class="sign-up-form" [formGroup]="SIGN_UP_FORM">
+            <!-- INPUT WRAPPER -->
+            <div class="input-wrapper">
+                <div class="user-input-wrapper">
+                    <!-- DISPLAY NAME INPUT -->
+                    <input type="text" class="input-text input" formControlName="display_name" required />
+                    <span class="floating-label">
+                        {{ DEFAULT_FORM_DATA.display_name }}
+                    </span>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="SIGN_UP_FORM.controls['display_name'].invalid && (SIGN_UP_FORM.controls['display_name'].dirty || SIGN_UP_FORM.controls['display_name'].touched)"
+                        class="error-message">
+                        <p>
+                            <fa-icon [icon]="warningIcon"></fa-icon>
+                            A name is required
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EMAIL INPUT -->
+                <div class="user-input-wrapper">
+                    <input type="text" class="input-text input" formControlName="email" required />
+                    <span class="floating-label">
+                        {{ DEFAULT_FORM_DATA.email }}
+                    </span>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="SIGN_UP_FORM.controls['email'].invalid && (SIGN_UP_FORM.controls['email'].dirty || SIGN_UP_FORM.controls['email'].touched)"
+                        class="error-message">
+                        <p>
+                            <fa-icon [icon]="warningIcon"></fa-icon>
+                            A valid email is required
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PASSWORD INPUT -->
+                <div class="user-input-wrapper">
+                    <input type="password" class="input-text input" formControlName="password" required />
+                    <span class="floating-label">
+                        {{ DEFAULT_FORM_DATA.password }}
+                    </span>
+
+                    <!-- ERROR MESSAGE -->
+                    <div *ngIf="SIGN_UP_FORM.controls['password'].invalid && (SIGN_UP_FORM.controls['password'].dirty || SIGN_UP_FORM.controls['password'].touched)"
+                        class="error-message">
+                        <p>
+                            <fa-icon [icon]="warningIcon"></fa-icon>
+                            Password must be 8 characters long
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- INPUT END -->
+
+            <p class="sub-text">
+                <span>
+                    Collaborate
+                </span>
+                and
+                <span>
+                    share knowledge
+                </span>
+                with a private group for FREE.
+            </p>
+
+            <!-- CHECKBOX -->
+            <div class="checkbox-wrapper">
+                <input type="checkbox" name="news-letter" class="checkbox" />
+                <label for="news-letter">
+                    Sign up for news letter
+                </label>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="button-wrapper">
+                <button class="sign-up-btn btn" [ngClass]="{ 'disabled': SIGN_UP_FORM.invalid }" (click)="createUser()">
+                    Sign Up
+                </button>
+
+                <button class="sign-in-btn btn" (click)="REDIRECT_TO_SIGN_IN_PAGE()">
+                    Sign In
+                </button>
+            </div>
+        </form>
+        <!-- FORM END -->
+    </div>
+</div>

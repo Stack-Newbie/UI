@@ -1,0 +1,139 @@
+<div class="container">
+    <!-- LEFT CONTENT -->
+    <div class="cta">
+        <!-- LOGO ICON -->
+        <img class="logo-icon" src="{{logoIcon}}" alt="logo" />
+        <!-- CTA CONTENT i.e Sign Up, Sign In Buttons -->
+        <div class="cta-content">
+            <img class="logo-banner" src="{{logoBanner}}" alt="logo" />
+
+            <p class="cta-text">
+                <span>
+                    Welcome!
+                </span>
+                We're thrilled to have you join our vibrant community of
+                <strong>
+                    developers, programmers
+                </strong>
+                and
+                <strong>
+                    technology enthusiasts.
+                </strong>
+            </p>
+
+            <!-- CTA BUTTONS -->
+            <div class="cta-actions">
+                <div class="btn-container">
+                    <button class="sign-in-btn btn" [routerLink]="'sign-in'">
+                        Sign In
+                    </button>
+
+                    <button class="sign-up-btn btn" [routerLink]="'sign-up'">
+                        Sign Up
+                    </button>
+                </div>
+
+                <!-- LINK -->
+                <a class="link">
+                    Ask questions and share your expertise
+                    <fa-icon class="arrow-icon" [icon]="linkIcon"></fa-icon>
+                </a>
+            </div>
+        </div>
+    </div> 
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+        <div class="card-container">
+            <!-- CARD START -->
+            <div class="card shift-right">
+                <!-- QUESTION -->
+                <h3 class="question">
+                    How can I troubleshoot a "NullPointerException" error in my Java code?
+                </h3>
+                <!-- CATEGORIES -->
+                <div class="categories">
+                    <p class="category">
+                        Debugging
+                    </p>
+
+                    <p class="category">
+                        Java
+                    </p>
+                </div>
+
+                <!-- POST INFO -->
+                <div class="post-info">
+                    <fa-icon class="card-icon" [icon]="penIcon"></fa-icon>
+                    <h4 class="info">
+                        modified 1 min ago
+                        <span>
+                            funny_numbers_assoc.
+                        </span>
+                    </h4>
+                </div>
+            </div>
+            <!-- CARD END -->
+
+            <!-- CARD START -->
+            <div class="card medium">
+                <!-- QUESTION -->
+                <h3 class="question">
+                    Why am I getting a "SyntaxError: unexpected token" in my JavaScript program?
+                </h3>
+                <!-- CATEGORIES -->
+                <div class="categories">
+                    <p class="category">
+                        Debugging
+                    </p>
+
+                    <p class="category">
+                        Javascript
+                    </p>
+                </div>
+
+                <!-- POST INFO -->
+                <div class="post-info">
+                    <fa-icon class="card-icon" [icon]="penIcon"></fa-icon>
+                    <h4 class="info">
+                        modified 30 secs ago
+                        <span>
+                            jonathan_ndambuki
+                        </span>
+                    </h4>
+                </div>
+            </div>
+            <!-- CARD END -->
+
+            <!-- CARD START -->
+            <div class="card shift-right low">
+                <!-- QUESTION -->
+                <h3 class="question">
+                    How can I sort a list of objects based on a specific attribute?
+                </h3>
+                <!-- CATEGORIES -->
+                <div class="categories">
+                    <p class="category">
+                        Sorting
+                    </p>
+
+                    <p class="category">
+                        Python
+                    </p>
+                </div>
+
+                <!-- POST INFO -->
+                <div class="post-info">
+                    <fa-icon class="card-icon" [icon]="penIcon"></fa-icon>
+                    <h4 class="info">
+                        modified 1 min ago
+                        <span>
+                            irfan ghat
+                        </span>
+                    </h4>
+                </div>
+            </div>
+            <!-- CARD END -->
+        </div>
+    </div>
+</div>

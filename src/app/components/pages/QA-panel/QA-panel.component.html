@@ -1,0 +1,584 @@
+<div class="container">
+    <!-- SIDE NAVIGATION -->
+    <div class="side-navigation">
+        <!-- LOGO -->
+        <img src="{{logo}}" alt="logo" class="logo" />
+
+        <!-- NAV LINKS -->
+        <nav class="navigation">
+            <ul class="nav-links">
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- ACTIVE INDICATOR -->
+                    <span class="active-indicator"></span>
+                    <a class="link active">
+                        <fa-icon class="active-icon" [icon]="questionMarkIcon"></fa-icon>
+                        QUESTIONS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="briefCaseIcon"></fa-icon>
+                        JOBS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="documentIcon"></fa-icon>
+                        DOCUMENTATION
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="tagIcon"></fa-icon>
+                        TAGS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="bookmarkIcon"></fa-icon>
+                        BADGES
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link" (click)="alter_ASK_QUESTION_FORM_state()">
+                        <fa-icon [icon]="bullHornIcon"></fa-icon>
+                        ASK QUESTIONS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="tableIcon"></fa-icon>
+                        STACK EXCHANGE
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item inbox">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="inboxIcon"></fa-icon>
+                        INBOX
+                    </a>
+                    <!-- MESSAGE COUNT -->
+                    <div class="message-count">
+                        <p class="count">
+                            24
+                        </p>
+                    </div>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link" (click)="LOGOUT()">
+                        <fa-icon [icon]="doorIcon"></fa-icon>
+                        LOG OUT
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <!-- MAIN CONTROLS -->
+            <div class="main-controls">
+                <!-- MENU ICON -->
+                <a class="toggle" title="Toggle menu">
+                    <fa-icon class="icon" [icon]="menuIcon"></fa-icon>
+                </a>
+                <!-- SEARCH BOX -->
+                <div class="search">
+                    <a class="toggle">
+                        <fa-icon class="icon" [icon]="searchIcon"></fa-icon>
+                    </a>
+                    <input type="text" [(ngModel)]="searchTerm" name="search" id="search-box" placeholder="Search" />
+                </div>
+            </div>
+            <!-- CONTROLS -->
+            <div class="user-controls">
+                <!-- GUIDE CONTROLS -->
+                <div class="guide-controls">
+                    <!-- HELP -->
+                    <div class="help">
+                        <a class="toggle">
+                            <fa-icon class="icon" [icon]="helpIcon"></fa-icon>
+                        </a>
+                        <p class="icon-text">
+                            Help
+                        </p>
+                    </div>
+                    <!-- TOUR -->
+                    <div class="tour">
+                        <a class="toggle">
+                            <fa-icon class="icon" [icon]="desktopIcon"></fa-icon>
+                        </a>
+                        <p class="icon-text">
+                            Tour
+                        </p>
+                    </div>
+                </div>
+                <!-- PROFILE -->
+                <div class="profile">
+                    <div class="profile-icons" [routerLink]="['/user-profile']">
+                        <img src="../../../../assets/avatars/user.png" alt="avatar" class="avatar" />
+
+                        <!-- ARROW ICON -->
+                        <fa-icon class="icon" [icon]="downIcon"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=============================-->
+        <!--=============================-->
+        <!-- MAIN CONTENT: Questions etc -->
+        <!--=============================-->
+        <!--=============================-->
+        <div class="wrapper">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <!-- PAGE TITLE -->
+                <div class="page-info">
+                    <div class="title">
+                        <!-- BACKGROUND TEXT -->
+                        <h1 class="background-text">
+                            top
+                        </h1>
+                        <!-- FOREGROUND TEXT -->
+                        <h3 class="foreground-text">
+                            Questions
+                        </h3>
+                    </div>
+
+                    <!-- CONTEXT INFO -->
+                    <div class="context-info">
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link-active">
+                            interesting
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link-dynamic">
+                            featured
+                            <!-- DISPLAY THE TOTAL LENGTH OF THE ARRAY -->
+                            <p class="context-link-count">
+                                {{ (questions$ | async)?.length }}
+                            </p>
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link">
+                            hot
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link">
+                            week
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link">
+                            month
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QUESTIONS -->
+                <div class="questions">
+
+                    <!-- QUESTION CONTENT: Question card & Question controls -->
+                    <div class="question-content" *ngFor="let question of (questions$ | async) | filter: searchTerm">
+                        <div class="question-wrapper">
+                            <div class="question-details">
+                                <!-- QUESTION CARD -->
+                                <div class="question-card">
+                                    <fa-icon [icon]="deleteIcon" class="delete-icon"
+                                        [ngClass]="{'hidden': !IS_AUTHORIZED(question.question_asker_id)}"
+                                        (click)="DELETE_QUESTION(question.question_id)"></fa-icon>
+                                    <!-- QUESTION -->
+                                    <h3 class="question">
+                                        {{question.question}}
+                                    </h3>
+                                    <!-- CATEGORIES -->
+                                    <div class="categories">
+                                        <!-- CATEGORY -->
+                                        <p class="category">
+                                            {{question.category}}
+                                        </p>
+                                    </div>
+
+                                    <!-- POST INFO -->
+                                    <div class="post-info">
+                                        <fa-icon class="card-icon" [icon]="penIcon"
+                                            (click)="alter_EDIT_QUESTION_FORM_state(question)"
+                                            [ngClass]="{'disabled': !IS_AUTHORIZED(question.question_asker_id)}"></fa-icon>
+                                        <h4 class="info">
+                                            modified {{formatDate(question.date_created)}} by
+                                            <span>
+                                                {{question.question_asker}}
+                                            </span>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <!-- QUESTION CONTROLS -->
+                                <div class="question-controls">
+                                    <!-- CONTROL -->
+                                    <div class="control">
+                                        <!-- CONTROL COUNT -->
+                                        <h2 class="control-count">
+                                            0
+                                        </h2>
+                                        <!-- CONTROL NAME -->
+                                        <p class="control-name">
+                                            votes
+                                        </p>
+                                        <!-- CONTROL ICON -->
+                                        <a class="control-icon">
+                                            <fa-icon [icon]="thumbsUpIcon"></fa-icon>
+                                        </a>
+                                    </div>
+                                    <!-- CONTROL END -->
+                                    <!-- CONTROL -->
+                                    <div class="control">
+                                        <!-- CONTROL COUNT -->
+                                        <h2 class="control-count">
+                                            {{question.answers.length}}
+                                        </h2>
+                                        <!-- CONTROL NAME -->
+                                        <p class="control-name">
+                                            answers
+                                        </p>
+                                        <!-- CONTROL ICON -->
+                                        <a class="control-icon">
+                                            <fa-icon [icon]="inboxIcon"></fa-icon>
+                                        </a>
+                                    </div>
+                                    <!-- CONTROL END -->
+                                    <!-- CONTROL -->
+                                    <div class="control">
+                                        <!-- CONTROL COUNT -->
+                                        <h2 class="control-count">
+                                            {{question.answers.length}}
+                                        </h2>
+                                        <!-- CONTROL NAME -->
+                                        <p class="control-name">
+                                            views
+                                        </p>
+                                        <!-- CONTROL ICON -->
+                                        <a class="control-icon">
+                                            <fa-icon [icon]="eyeIcon"></fa-icon>
+                                        </a>
+                                    </div>
+                                    <!-- CONTROL END -->
+                                </div>
+                            </div>
+                            <!--==============-->
+                            <!-- ANSWER INPUT -->
+                            <!--==============-->
+                            <div class="answer-input-wrapper" #textarea>
+                                <fa-icon class="answer-icon" [icon]="pencilIcon"></fa-icon>
+                                <!-- TEXT AREA -->
+                                <form [formGroup]="answerForm">
+                                    <textarea id="answer-input" placeholder="Add an answer..."
+                                        formControlName="answer"></textarea>
+                                    <!-- SUBMIT BUTTON -->
+                                    <fa-icon id="answer-btn" [icon]="paperPlaneIcon"
+                                        (click)="addAnswer(question.question_id)">
+                                    </fa-icon>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- ANSWERS -->
+                        <div class="answers" *ngFor="let answer of question.answers">
+                            <!-- ANSWER -->
+                            <div class="answer">
+                                <!-- ANSWER WRAPPER -->
+                                <div class="answer-wrapper">
+                                    <!-- CONTENT WRAPPER -->
+                                    <div class="answer-content-wrapper">
+                                        <!-- ANSWER CONTENT -->
+                                        <div class="answer-content">
+                                            <!-- RESPONDENT PROFILE -->
+                                            <div class="respondent-profile">
+                                                <!-- AVATAR -->
+                                                <img src="../../../../assets/avatars/user.png" alt="avatar"
+                                                    class="respondent-avatar">
+
+                                                <!-- RESPONDENT NAME -->
+                                                <p class="respondent-name">
+                                                    {{answer.answerer}}
+                                                </p>
+                                            </div>
+                                            <!-- RESPONDENT ANSWER -->
+                                            <div class="response">
+                                                <p>
+                                                    {{answer.answer}}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- ANSWER ACTIONS -->
+                                        <div class="answer-actions">
+                                            <div class="vote-icons">
+                                                <!-- UPVOTE -->
+                                                <fa-icon [icon]="upIcon" class="answer-icon"
+                                                    (click)="UPVOTE(answer.answer_id)"></fa-icon>
+                                                <!-- VOTE COUNT -->
+                                                <p class="vote-count">{{answer.vote_count}}</p>
+                                                <!-- DOWNVOTE -->
+                                                <fa-icon [icon]="downIcon" class="answer-icon"
+                                                    (click)="DOWNVOTE(answer.answer_id)"></fa-icon>
+                                            </div>
+                                            <!-- MARK AS PREFERRED -->
+                                            <fa-icon [icon]="checkIcon" class="answer-icon"
+                                                (click)="MARK_AS_PREFERRED(answer.answer_id)"></fa-icon>
+                                        </div>
+                                    </div>
+
+                                    <!-- COMMENTS -->
+                                    <div class="comments" *ngFor="let comment of answer.comments">
+                                        <!-- COMMENT -->
+                                        <div class="comment">
+                                            <!-- RESPONDENT PROFILE -->
+                                            <div class="commenter-profile">
+                                                <!-- AVATAR -->
+                                                <img src="../../../../assets/avatars/user.png" alt="avatar"
+                                                    class="commenter-avatar">
+
+                                                <!-- RESPONDENT NAME -->
+                                                <p class="commenter-name">
+                                                    {{comment.commenter}}
+                                                </p>
+                                            </div>
+                                            <!-- RESPONDENT ANSWER -->
+                                            <div class="comment-response">
+                                                <p>
+                                                    {{comment.comment}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- COMMENT END -->
+                                    </div>
+                                </div>
+
+                                <!--===============-->
+                                <!-- COMMENT INPUT -->
+                                <!--===============-->
+                                <div class="comment-input-wrapper" #textarea>
+                                    <fa-icon class="comment-icon" [icon]="commentIcon"></fa-icon>
+                                    <!-- TEXT AREA -->
+                                    <form [formGroup]="commentForm">
+                                        <textarea id="comment-input" placeholder="Add an comment..."
+                                            formControlName="comment"></textarea>
+                                        <!-- SUBMIT BUTTON -->
+                                        <fa-icon id="comment-btn" [icon]="paperPlaneIcon"
+                                            (click)="addComment(answer.answer_id)">
+                                        </fa-icon>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <!-- ANSWER END -->
+                        </div>
+                    </div>
+                    <!-- END -->
+
+                </div>
+            </div>
+            <!--====================-->
+            <!-- ADDITIONAL CONTENT -->
+            <!--====================-->
+            <div class="additional-content">
+                <!-- SECTION TITLE -->
+                <div class="section-title">
+                    <h2 class="background-text">
+                        Jobs
+                    </h2>
+
+                    <h3 class="foreground-text">
+                        Looking out for...
+                    </h3>
+                </div>
+
+                <!-- TIMELINE i.e Line with Circles -->
+                <div class="timeline">
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Front End developer with Angular experience
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Nyeri
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORY -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Angular
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+
+                    <!-- BAR -->
+                    <span class="bar"></span>
+
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Senior Android Developer
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Nyeri
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORIES -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Java
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+
+                    <!-- BAR -->
+                    <span class="bar"></span>
+
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Senior Back End Dveloper with Nodejs, MSSQL and Expressjs
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Atlanta
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORIES -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Nodejs
+                                </p>
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    MSSQL
+                                </p>
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Expressjs
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <!-- TIMELINE END -->
+
+                <!-- ADDITIONAL QUESTIONS -->
+                <div class="hot-question-section">
+                    <h2 class="background-text">
+                        hot
+                    </h2>
+                    <h3 class="foreground-text">
+                        questions
+                    </h3>
+                    <!-- HOT QUESTION SECTION -->
+                    <div class="hot-questions">
+                        <!-- WRAPPER -->
+                        <div class="hot-question-wrapper">
+                            <!-- QUESTION -->
+                            <p class="hot-question">
+                                <fa-icon class="hot-question-icon" [icon]="questionMarkIconAlt"></fa-icon>
+                                Describe the concept of closure in Javascript as best as you could
+                            </p>
+                        </div>
+                        <!-- WRAPPER -->
+                        <div class="hot-question-wrapper">
+                            <!-- QUESTION -->
+                            <p class="hot-question">
+                                <fa-icon class="hot-question-icon" [icon]="questionMarkIconAlt"></fa-icon>
+                                Describe the concept of closure in Javascript as best as you could
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--===== COMPONENTS ====-->
+<!-- EDIT QUESTION COMPONENT -->
+<edit-question></edit-question>
+<!-- ASK QUESTION COMPONENT -->
+<ask-question></ask-question>

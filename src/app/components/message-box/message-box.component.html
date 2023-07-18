@@ -1,0 +1,33 @@
+<!-- MESSAGE BOX -->
+<div #messageBox class="message-box" *ngIf="successMessage">
+    <div class="icon">
+        <fa-icon [icon]="envelopeIcon"></fa-icon>
+    </div>
+
+    <div class="content">
+        <h2 class="message-title">
+            Message
+        </h2>
+
+        <p class="message">
+            {{ successMessage }}
+        </p>
+    </div>
+</div>
+
+<!-- MESSAGE BOX -->
+<div #messageBox class="message-box error" *ngIf="errorMessage">
+    <div class="icon">
+        <fa-icon [icon]="envelopeIcon"></fa-icon>
+    </div>
+
+    <div class="content">
+        <h2 class="message-title">
+            Message
+        </h2>
+
+        <p class="message">
+            {{ errorMessage }}
+        </p>
+    </div>
+</div>

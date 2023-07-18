@@ -1,0 +1,92 @@
+<div class="container sticky">
+    <!-- FORM -->
+    <form class="form" [formGroup]="ASK_QUESTION_FORM" [class.active]="isActive">
+        <div class="form-header">
+            <!-- CLOSE ICON -->
+            <a class="close-form-btn" (click)="close_ASK_QUESTION_FORM()">
+                <fa-icon class="close-icon" [icon]="closeIcon"></fa-icon>
+            </a>
+            <!-- FORM TITLE -->
+            <div class="form-title">
+                <h3 class="title">
+                    Ask Question
+                </h3>
+                <fa-icon [icon]="questionMarkIcon"></fa-icon>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="form-inputs">
+            <!-- INPUT WRAPPER -->
+            <div class="user-input-wrapper">
+                <!-- QUESTION INPUT -->
+                <input type="text" class="input-text input" formControlName="question" required />
+                <span class="floating-label">
+                    {{ (DEFAULT_FORM_DATA.question.length > 20) ? (DEFAULT_FORM_DATA.question | slice:0:20)+'...':
+                    (DEFAULT_FORM_DATA.question) }}
+                </span>
+
+                <!-- ERROR MESSAGE -->
+                <div *ngIf="ASK_QUESTION_FORM.controls['question'].invalid && (ASK_QUESTION_FORM.controls['question'].dirty || ASK_QUESTION_FORM.controls['question'].touched)"
+                    class="error-message">
+                    <p>
+                        <fa-icon [icon]="warningIcon"></fa-icon>
+                        Please type your question
+                    </p>
+                </div>
+            </div>
+            <!-- WRAPPER END -->
+
+            <!-- INPUT WRAPPER -->
+            <div class="user-input-wrapper">
+                <!-- QUESTION INPUT -->
+                <input type="text" class="input-text input" formControlName="additional_info" required />
+                <span class="floating-label">
+                    {{ (DEFAULT_FORM_DATA.additional_info.length > 25) ? (DEFAULT_FORM_DATA.additional_info |
+                    slice:0:25)+'...': (DEFAULT_FORM_DATA.additional_info) }}
+                </span>
+
+                <!-- ERROR MESSAGE -->
+                <div *ngIf="ASK_QUESTION_FORM.controls['additional_info'].invalid && (ASK_QUESTION_FORM.controls['additional_info'].dirty || ASK_QUESTION_FORM.controls['additional_info'].touched)"
+                    class="error-message">
+                    <p>
+                        <fa-icon [icon]="warningIcon"></fa-icon>
+                        Provide additional information
+                    </p>
+                </div>
+            </div>
+            <!-- WRAPPER END -->
+
+            <!-- INPUT WRAPPER -->
+            <div class="user-input-wrapper">
+                <!-- QUESTION INPUT -->
+                <input type="text" class="input-text input" formControlName="category" required />
+                <span class="floating-label">
+                    {{ (DEFAULT_FORM_DATA.category.length > 25) ? (DEFAULT_FORM_DATA.category | slice:0:25)+'...':
+                    (DEFAULT_FORM_DATA.category) }}
+                </span>
+
+                <!-- ERROR MESSAGE -->
+                <div *ngIf="ASK_QUESTION_FORM.controls['category'].invalid && (ASK_QUESTION_FORM.controls['category'].dirty || ASK_QUESTION_FORM.controls['category'].touched)"
+                    class="error-message">
+                    <p>
+                        <fa-icon [icon]="warningIcon"></fa-icon>
+                        Please provide a category
+                    </p>
+                </div>
+            </div>
+            <!-- WRAPPER END -->
+        </div>
+        <!-- BUTTONS -->
+        <div class="button-wrapper">
+            <button class="submit-btn btn" (click)="SUBMIT_QUESTION()"
+                [ngClass]="{ 'disabled': ASK_QUESTION_FORM.invalid }">
+                Submit question
+            </button>
+
+            <button class="view-btn btn" [ngClass]="{ 'disabled': ASK_QUESTION_FORM.invalid }">
+                View questions asked
+            </button>
+        </div>
+    </form>
+</div>

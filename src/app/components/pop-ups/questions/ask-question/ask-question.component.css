@@ -1,0 +1,363 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* sticky ELEMENT: make an element "stick" to a specific position on the screen as the user scrolls */
+.sticky {
+    position: fixed;
+    top: 15%;
+    right: 35%;
+    z-index: 10;
+    -webkit-animation: hover 2.2s infinite;
+    animation: hover 2.2s infinite;
+}
+
+/* FROM STYLING */
+.form {
+    background: var(--white);
+    width: 22rem;
+    border-bottom: 12px solid var(--amber);
+    border-radius: 12px;
+    -webkit-box-shadow: var(--shadow-dark);
+    box-shadow: var(--shadow-dark);
+    padding: 2rem;
+    display: none;
+
+}
+
+/* ACTIVE SCTATE: form */
+.form.active {
+    display: block;
+}
+
+.form .close-icon {
+    background: var(--amber);
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+
+.form .form-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+.form .form-header .form-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .2rem;
+    color: var(--amber);
+    font-size: 1.1rem;
+}
+
+/* INPUT STYLING */
+.form .input-wrapper {
+    margin-top: 3rem;
+}
+
+.form .user-input-wrapper .input {
+    padding: .5rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    width: 100%;
+    background: transparent;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+}
+
+.form .user-input-wrapper .input:focus {
+    outline: none;
+}
+
+.form .user-input-wrapper .input:hover {
+    border-bottom: 1px solid var(--blue);
+}
+
+.form .user-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form .user-input-wrapper .input-text {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--dark-gray);
+    color: var(--dark-gray);
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form .user-input-wrapper .floating-label {
+    position: absolute;
+    pointer-events: none;
+    top: 16px;
+    left: 10px;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    color: #bebebe;
+}
+
+.user-input-wrapper input:focus~.floating-label,
+.user-input-wrapper input:not(:focus):valid~.floating-label {
+    top: -15px;
+    left: 10px;
+    font-size: 13px;
+    opacity: 1;
+    color: var(--dark-blue);
+    -webkit-animation: glow 1s infinite;
+    animation: glow 1s infinite;
+}
+
+/* INPUT ERROR STYLING */
+.error-message {
+    width: 100%;
+    text-align: right;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    -webkit-animation: glow 1s infinite;
+    animation: glow 1s infinite;
+}
+
+.error-message p {
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    font-size: .8rem;
+    color: var(--amber);
+}
+
+/* BUTTON STYLING */
+.btn {
+    width: 100%;
+    border: none;
+    border-radius: 32px;
+    padding: .6rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+}
+
+.submit-btn {
+    background: var(--amber);
+}
+
+.view-btn {
+    background: var(--blue);
+}
+
+.btn:hover {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: var(--shadow-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+/* DISABLED & ENABLED STATES */
+.enabled {
+    opacity: 1;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+
+/* ANIMATIONS */
+@-webkit-keyframes ambient-glow {
+    0% {
+        -webkit-box-shadow: var(--blue-glow);
+        box-shadow: var(--blue-glow);
+    }
+
+    50% {
+        -webkit-box-shadow: 0 2rem 2rem 0 rgba(84, 158, 255, 0.1);
+        box-shadow: 0 2rem 2rem 0 rgba(84, 158, 255, 0.1);
+    }
+
+    100% {
+        -webkit-box-shadow: var(--blue-glow);
+        box-shadow: var(--blue-glow);
+    }
+}
+
+@keyframes ambient-glow {
+    0% {
+        -webkit-box-shadow: var(--blue-glow);
+        box-shadow: var(--blue-glow);
+    }
+
+    50% {
+        -webkit-box-shadow: 0 2rem 2rem 0 rgba(84, 158, 255, 0.1);
+        box-shadow: 0 2rem 2rem 0 rgba(84, 158, 255, 0.1);
+    }
+
+    100% {
+        -webkit-box-shadow: var(--blue-glow);
+        box-shadow: var(--blue-glow);
+    }
+}
+
+@-webkit-keyframes glow {
+    0% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@-webkit-keyframes hover {
+    0% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+
+    50% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes hover {
+    0% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+
+    50% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 425px) {
+    .form-container {
+        padding: 2rem;
+    }
+
+    .form {
+        width: 20rem;
+    }
+
+    .sticky {
+        right: 5%;
+    }
+
+    .form .form-header .form-title {
+        font-size: .9rem;
+    }
+
+    .form .user-input-wrapper .floating-label {
+        font-size: .9rem;
+        top: 18px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .sticky {
+        right: 5%;
+    }
+
+    .form .user-input-wrapper .floating-label {
+        font-size: .9rem;
+        top: 18px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .sticky {
+        right: 4%;
+    }
+
+    .form {
+        width: 18rem;
+    }
+
+    .form .user-input-wrapper .floating-label {
+        font-size: .8rem;
+        top: 18px;
+    }
+
+    .error-message p {
+        word-wrap: normal;
+        font-size: .7rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}

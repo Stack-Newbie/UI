@@ -1,0 +1,396 @@
+<div class="container">
+    <!-- SIDE NAVIGATION -->
+    <div class="side-navigation">
+        <!-- LOGO -->
+        <img src="{{logo}}" alt="logo" class="logo" />
+
+        <!-- NAV LINKS -->
+        <nav class="navigation">
+            <ul class="nav-links">
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="briefCaseIcon"></fa-icon>
+                        JOBS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="documentIcon"></fa-icon>
+                        DOCUMENTATION
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="tagIcon"></fa-icon>
+                        TAGS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="bookmarkIcon"></fa-icon>
+                        BADGES
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link" (click)="alter_ASK_QUESTION_FORM_state()">
+                        <fa-icon [icon]="bullHornIcon"></fa-icon>
+                        ASK QUESTIONS
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="tableIcon"></fa-icon>
+                        STACK EXCHANGE
+                    </a>
+                </li>
+                <!-- LINK ITEM -->
+                <li class="link-item inbox">
+                    <!-- INDICATOR -->
+                    <span class="indicator"></span>
+                    <a class="link">
+                        <fa-icon [icon]="inboxIcon"></fa-icon>
+                        INBOX
+                    </a>
+                    <!-- MESSAGE COUNT -->
+                    <div class="message-count">
+                        <p class="count">
+                            24
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--====================-->
+    <!--====================-->
+    <!--=== PAGE CONTENT ===-->
+    <!--====================-->
+    <!--====================-->
+    <div class="content">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <!-- MAIN CONTROLS -->
+            <div class="main-controls">
+                <!-- MENU ICON -->
+                <a class="toggle" title="Toggle menu">
+                    <fa-icon class="icon" [icon]="menuIcon"></fa-icon>
+                </a>
+                <!-- SEARCH BOX -->
+                <div class="search">
+                    <a class="toggle">
+                        <fa-icon class="icon" [icon]="searchIcon"></fa-icon>
+                    </a>
+                    <input type="search" name="search" id="search-box" placeholder="Search" />
+                </div>
+            </div>
+            <!-- CONTROLS -->
+            <div class="user-controls">
+                <!-- GUIDE CONTROLS -->
+                <div class="guide-controls">
+                    <!-- HELP -->
+                    <div class="help">
+                        <a class="toggle">
+                            <fa-icon class="icon" [icon]="helpIcon"></fa-icon>
+                        </a>
+                        <p class="icon-text">
+                            Help
+                        </p>
+                    </div>
+                    <!-- TOUR -->
+                    <div class="tour">
+                        <a class="toggle">
+                            <fa-icon class="icon" [icon]="desktopIcon"></fa-icon>
+                        </a>
+                        <p class="icon-text">
+                            Tour
+                        </p>
+                    </div>
+                </div>
+                <!-- PROFILE -->
+                <div class="profile">
+                    <div class="profile-icons">
+                        <img src="../../../../assets/avatars/user.png" alt="avatar" class="avatar" />
+
+                        <!-- ARROW ICON -->
+                        <fa-icon class="icon" [icon]="downIcon"></fa-icon>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--=============================-->
+        <!--=============================-->
+        <!-- MAIN CONTENT: Questions etc -->
+        <!--=============================-->
+        <!--=============================-->
+        <div class="wrapper">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <!-- PAGE TITLE -->
+                <div class="page-info">
+                    <div class="title">
+                        <!-- BACKGROUND TEXT -->
+                        <h1 class="background-text">
+                            profile
+                        </h1>
+                        <!-- FOREGROUND TEXT -->
+                        <h3 class="foreground-text">
+                            User
+                        </h3>
+                    </div>
+
+                    <!-- CONTEXT INFO -->
+                    <div class="context-info">
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link-active">
+                            user profile
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link-dynamic">
+                            inbox
+                            <p class="context-link-count">
+                                24
+                            </p>
+                        </a>
+                        <!-- CONTEXT LINK -->
+                        <a class="context-link context-link">
+                            pending
+                        </a>
+                    </div>
+                </div>
+                <!--==============-->
+                <!--==== USERS ===-->
+                <!--==============-->
+                <div class="activity">
+                    <!-- USER -->
+                    <div class="profile">
+                        <!-- USER INFO -->
+                        <div class="profile-info bordered">
+                            <fa-icon class="profile-info-icon" [icon]="questionMarkIconAlt"></fa-icon>
+                            <!-- DISPLAY TITLE -->
+                            <h3 class="display-title">
+                                Questions asked
+                            </h3>
+
+                            <!-- QUESTIONS ASKED -->
+                            <h3 class="questions-asked">
+                                
+                            </h3>
+                        </div>
+
+                        <!-- USER INFO -->
+                        <div class="profile-info">
+                            <!-- DISPLAY TITLE -->
+                            <h3 class="display-title">
+                                Questions answered
+                            </h3>
+
+                            <!-- QUESTIONS ASKED -->
+                            <h3 class="questions-asked">
+                                8
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- USER END -->
+                </div>
+            </div>
+            <!--====================-->
+            <!--====================-->
+            <!--====================-->
+            <!-- ADDITIONAL CONTENT -->
+            <!--====================-->
+            <!--====================-->
+            <!--====================-->
+            <div class="additional-content">
+                <!-- SECTION TITLE -->
+                <div class="section-title">
+                    <h2 class="background-text">
+                        Jobs
+                    </h2>
+
+                    <h3 class="foreground-text">
+                        Looking out for...
+                    </h3>
+                </div>
+
+                <!-- TIMELINE i.e Line with Circles -->
+                <div class="timeline">
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Front End developer with Angular experience
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Nyeri
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORY -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Angular
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+
+                    <!-- BAR -->
+                    <span class="bar"></span>
+
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Senior Android Developer
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Nyeri
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORIES -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Java
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+
+                    <!-- BAR -->
+                    <span class="bar"></span>
+
+                    <!-- CIRCLE -->
+                    <div class="circle">
+                        <!-- CIRCLE LABEL: Will appear inside the circle -->
+                        <span class="label"></span>
+                        <!-- CIRCLE TITLE -->
+                        <span class="title">
+                            <p class="job-info-text">
+                                Senior Back End Dveloper with Nodejs, MSSQL and Expressjs
+                            </p>
+                            <!-- JOB INFO -->
+                            <div class="job-info">
+                                <div class="location-info">
+                                    <fa-icon [icon]="pinIcon"></fa-icon>
+                                    <p class="location">
+                                        Atlanta
+                                    </p>
+                                </div>
+
+                                <div class="location-info">
+                                    <fa-icon [icon]="globeIcon"></fa-icon>
+                                    <p class="work-place">
+                                        Remote
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- JOB INFO END -->
+                            <!-- JOB CATEGORIES -->
+                            <div class="job-categories">
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Nodejs
+                                </p>
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    MSSQL
+                                </p>
+                                <!-- CATEGORY -->
+                                <p class="job-category">
+                                    Expressjs
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <!-- TIMELINE END -->
+
+                <!-- ADDITIONAL QUESTIONS -->
+                <div class="hot-question-section">
+                    <h2 class="background-text">
+                        hot
+                    </h2>
+                    <h3 class="foreground-text">
+                        questions
+                    </h3>
+                    <!-- HOT QUESTION SECTION -->
+                    <div class="hot-questions">
+                        <!-- WRAPPER -->
+                        <div class="hot-question-wrapper">
+                            <!-- QUESTION -->
+                            <p class="hot-question">
+                                <fa-icon class="hot-question-icon" [icon]="questionMarkIconAlt"></fa-icon>
+                                Describe the concept of closure in Javascript as best as you could
+                            </p>
+                        </div>
+                        <!-- WRAPPER -->
+                        <div class="hot-question-wrapper">
+                            <!-- QUESTION -->
+                            <p class="hot-question">
+                                <fa-icon class="hot-question-icon" [icon]="questionMarkIconAlt"></fa-icon>
+                                Describe the concept of closure in Javascript as best as you could
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--===== COMPONENTS ====-->
+<!-- EDIT QUESTION COMPONENT -->
+<edit-question></edit-question>
+<!-- ASK QUESTION COMPONENT -->
+<ask-question></ask-question>

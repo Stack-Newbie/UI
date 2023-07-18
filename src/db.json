@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "display_name": "tyrell_wellick",
+      "email": "tyrell_wellick@ecorp.com",
+      "password": "fsocietyRocks",
+      "id": 2
+    },
+    {
+      "display_name": "angela_moss",
+      "email": "angela_moss@ecorp.com",
+      "password": "wh1ter0se",
+      "id": 3
+    },
+    {
+      "display_name": "darlene_alderson",
+      "email": "darlene_alderson@fsociety.com",
+      "password": "d0llp@rts",
+      "id": 4
+    },
+    {
+      "display_name": "dom_di_pierro",
+      "email": "dom_di_pierro@fbi.gov",
+      "password": "darkArmy2023",
+      "id": 5
+    },
+    {
+      "display_name": "mr_robot",
+      "email": "mr_robot@fsociety.com",
+      "password": "revolution4ever",
+      "id": 6
+    },
+    {
+      "display_name": "whiterose",
+      "email": "whiterose@darkarmy.net",
+      "password": "timeMachine",
+      "id": 7
+    },
+    {
+      "display_name": "leon_trenton",
+      "email": "leon_trenton@darkweb.com",
+      "password": "burnThemAll!",
+      "id": 8
+    },
+    {
+      "display_name": "joanna_wellick",
+      "email": "joanna_wellick@ecorp.com",
+      "password": "JoannaRIP",
+      "id": 9
+    },
+    {
+      "display_name": "trenton_biswas",
+      "email": "trenton_biswas@fsociety.com",
+      "password": "Heartbleed",
+      "id": 11
+    },
+    {
+      "display_name": "phillip_price",
+      "email": "phillip_price@ecorp.com",
+      "password": "ec0n0m1cP0wer",
+      "id": 12
+    },
+    {
+      "display_name": "terry_colby",
+      "email": "terry_colby@ecorp.com",
+      "password": "AllSafeSucks",
+      "id": 13
+    },
+    {
+      "display_name": "scott_knowles",
+      "email": "scott_knowles@ecorp.com",
+      "password": "SharonKnowles",
+      "id": 14
+    },
+    {
+      "display_name": "ray_haynes",
+      "email": "ray_haynes@raylon.com",
+      "password": "Ctrl-Alt-Del",
+      "id": 16
+    },
+    {
+      "display_name": "susan_jacobs",
+      "email": "susan_jacobs@ecorp.com",
+      "password": "SunnyDayz",
+      "id": 17
+    },
+    {
+      "display_name": "irving",
+      "email": "irving@darkarmy.net",
+      "password": "DarkArmyRules",
+      "id": 19
+    },
+    {
+      "display_name": "im_a_new_user",
+      "email": "new_user@gmail.com",
+      "password": "newpassword",
+      "id": 21
+    }
+  ],
+  "questions": [
+    {
+      "id": 123,
+      "question": "What is object-oriented programming?",
+      "additional_info": "Explain the key principles and benefits.",
+      "category": "Programming Concepts"
+    },
+    {
+      "id": 456,
+      "question": "What is the difference between compile-time and runtime?",
+      "additional_info": "Provide examples to illustrate the distinction.",
+      "category": "Fundamentals"
+    },
+    {
+      "id": 789,
+      "question": "What are the advantages of using version control systems?",
+      "additional_info": "Discuss popular version control tools and their benefits.",
+      "category": "Software Development"
+    },
+    {
+      "id": 101,
+      "question": "How can you handle exceptions in Python?",
+      "additional_info": "Explain try-except blocks and exception handling mechanisms.",
+      "category": "Python"
+    },
+    {
+      "id": 202,
+      "question": "What is the purpose of a constructor in object-oriented programming?",
+      "additional_info": "Discuss its role in initializing objects and provide an example.",
+      "category": "OOP"
+    }
+  ]
+}
