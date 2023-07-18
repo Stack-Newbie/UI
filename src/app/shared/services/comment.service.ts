@@ -6,7 +6,7 @@ import { PageReloaderService } from "./page-reloader.service";
     providedIn: "root"
 })
 export class CommentService {
-    private BASE_URL = `http://localhost:8000`;
+    private BASE_URL = `https://stacknewbie-server.onrender.com`;
 
     constructor(private HTTP: HttpClient, private pageReloaderService: PageReloaderService) { }
 

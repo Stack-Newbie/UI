@@ -8,7 +8,7 @@ import { PageReloaderService } from "./page-reloader.service";
 })
 export class AnswerService {
     /* BASE URL */
-    private BASE_URL = `http://localhost:8000`;
+    private BASE_URL = `https://stacknewbie-server.onrender.com`;
     private MAILING_SERVICE = `http://localhost:5000`;
 
     constructor(private HTTP: HttpClient, private pageReloaderService: PageReloaderService) { }

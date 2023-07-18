@@ -11,7 +11,7 @@ import { REDIRECT_SERVICE } from "./redirect.service";
 })
 export class AuthenticationService {
     /* BASE URL */
-    private BASE_URL = `http://localhost:8000`;
+    private BASE_URL = `https://stacknewbie-server.onrender.com`;
 
     constructor(
         private HTTP: HttpClient,

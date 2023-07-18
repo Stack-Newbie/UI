@@ -10,7 +10,7 @@ import { MessageBoxService } from "./message-box.service";
 })
 export class UserService {
     /* BASE URL */
-    private BASE_URL = `http://localhost:8000`;
+    private BASE_URL = `https://stacknewbie-server.onrender.com`;
     private MAIL_BASED_REGISTRATION = `http://localhost:5000`;
     private RESET_PASSWORD_URL = `http://localhost:4000`;
 

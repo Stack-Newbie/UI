@@ -10,7 +10,7 @@ import { MessageBoxService } from "./message-box.service";
 })
 export class QuestionService {
     /* BASE URL */
-    private BASE_URL = `http://localhost:8000`;
+    private BASE_URL = `https://stacknewbie-server.onrender.com`;
 
     constructor(
         private HTTP: HttpClient,
